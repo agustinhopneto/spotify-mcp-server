@@ -1,0 +1,25 @@
+services:
+  spotify-mcp:
+    build: .
+    env_file: .env
+    environment:
+      SPOTIFY_CONFIG_FILE: /data/spotify-config.json
+    volumes:
+      - ./data:/data
+    stdin_open: true
+    tty: false
+    restart: unless-stopped
+
+  spotify-auth:
+    build: .
+    env_file: .env
+    environment:
+      SPOTIFY_CONFIG_FILE: /data/spotify-config.json
+      SPOTIFY_LISTEN_HOST: 0.0.0.0
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:8888:8888"
+    stdin_open: true
+    tty: true
+    command: ["node", "build/auth.js"]
