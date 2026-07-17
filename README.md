@@ -5,6 +5,13 @@
 
 A lightweight [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that enables AI assistants like Cursor & Claude to control Spotify playback and manage playlists.
 
+> **Local derivative of [marcelmarais/spotify-mcp-server](https://github.com/marcelmarais/spotify-mcp-server)**
+>
+> This project retains the original Spotify MCP implementation and adds a
+> Docker-first workflow, local `.env` configuration, persisted OAuth tokens, and
+> Codex-friendly MCP setup. It is maintained as an independent local copy rather
+> than a GitHub fork.
+
 <details>
 <summary>Contents</summary>
 
