@@ -24,13 +24,8 @@
     "docker:auth": "docker compose run --rm --service-ports spotify-auth",
     "docker:logs": "docker compose logs -f spotify-mcp"
   },
-  "files": [
-    "build"
-  ],
-  "keywords": [
-    "MCP",
-    "Spotify"
-  ],
+  "files": ["build"],
+  "keywords": ["MCP", "Spotify"],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.10.1",
     "@spotify/web-api-ts-sdk": "^1.2.0",
